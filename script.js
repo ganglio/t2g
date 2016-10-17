@@ -26,8 +26,8 @@
 		if (endTime > 0) {
 			document.body.classList.add("isTimer");
 			if (title != undefined && title != "") {
-				document.querySelector("title").innerHTML = title;
-				document.querySelector('#title').innerHTML = title;
+				document.querySelector("title").innerHTML = decodeURIComponent(title);
+				document.querySelector('#title').innerHTML = decodeURIComponent(title);
 			}
 			update();
 			window.setInterval(update,250);
