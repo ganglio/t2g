@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
+
+$button_bg: #0DB7ED;
+
+body {
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Oxygen Mono', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	margin: 0.5em 0;
+	font-size: 2em;
+	font-weight: bold;
+}
+ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+	li {
+		height: 1.5em;
+		line-height: 1.5em;
+		background-color: transparent;
+		font-size: 1.5em;
+		padding: 0.5em 0;
+		-webkit-transition: all 0.125s;
+	}
+	li.changed {
+		background-color: $button_bg;
+	}
+	li:after {
+		content: attr(data-after);
+	}
+}
+
+input {
+	-webkit-appearance: none;
+	display: block;
+	margin: 0.5em auto;
+	font-size: 1.5em;
+	height: 1.5em;
+	line-height: 1.5em;
+	background-color: $button_bg;
+	border: none;
+	border-radius: 0;
+	color: white;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+}
+
+input[type=date], input[type=time] {
+	width: 50%;
+	float: left;
+}
+
+ul, form {
+	display: none;
+}
+
+.isForm {
+	ul {
+		display: none;
+	}
+	form {
+		display: block;
+	}
+}
+
+.isTimer {
+	ul {
+		display: block;
+	}
+	form {
+		display: none;
+	}
+}
+
+@media (orientation: landscape) {
+	li {
+		float: left;
+		width: 50%;
+	}
+}

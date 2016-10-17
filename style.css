@@ -1,0 +1,94 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
+/* line 5, style.scss */
+body {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Oxygen Mono', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 12, style.scss */
+h1 {
+  margin: 0.5em 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* line 17, style.scss */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 21, style.scss */
+ul li {
+  height: 1.5em;
+  line-height: 1.5em;
+  background-color: transparent;
+  font-size: 1.5em;
+  padding: 0.5em 0;
+  -webkit-transition: all 0.125s;
+}
+/* line 29, style.scss */
+ul li.changed {
+  background-color: #0db7ed;
+}
+/* line 32, style.scss */
+ul li:after {
+  content: attr(data-label);
+}
+
+/* line 37, style.scss */
+input {
+  -webkit-appearance: none;
+  display: block;
+  margin: 0.5em auto;
+  font-size: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  background-color: #0db7ed;
+  border: none;
+  border-radius: 0;
+  color: white;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 53, style.scss */
+input[type=date], input[type=time] {
+  width: 50%;
+  float: left;
+}
+
+/* line 58, style.scss */
+ul, form {
+  display: none;
+}
+
+/* line 63, style.scss */
+.isForm ul {
+  display: none;
+}
+/* line 66, style.scss */
+.isForm form {
+  display: block;
+}
+
+/* line 72, style.scss */
+.isTimer ul {
+  display: block;
+}
+/* line 75, style.scss */
+.isTimer form {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  /* line 81, style.scss */
+  li {
+    float: left;
+    width: 50%;
+  }
+}
