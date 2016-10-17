@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Time 2 Go!</title>
   <link rel="stylesheet" type="text/css" href="style.css?12345"/>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+  <script type="text/javascript" src="/js/moment.min.js"></script>
+  <script type="text/javascript" src="/js/moment-precise-range.js"></script>
   <script type="text/javascript" src="script.js?12345"></script>
   <link rel="shortcut icon" href="favicon.ico" />
   <!-- some iPhone goodies -->
@@ -16,17 +17,18 @@
   <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" />
 </head>
  <body>
-  <h1>Time to Go!</h1>
+  <h1 id='title'>Time to Go!</h1>
   <ul>
-    <!--li data-after='m' data-label='M'></li-->
-    <li data-after='w' data-label='w'></li>
-    <li data-after='dd' data-label='d'></li>
-    <li data-after='hh' data-label='h'></li>
-    <li data-after='mm' data-label='m'></li>
-    <li data-after='ss' data-label='s'></li>
+    <li data-after='years' data-label='y'>0</li>
+    <li data-after='months' data-label='m'></li>
+    <li data-after='days' data-label='d'></li>
+    <li data-after='hours' data-label='h'></li>
+    <li data-after='minutes' data-label='m'></li>
+    <li data-after='seconds' data-label='s'></li>
   </ul>
   <form>
     <input type='date' id='date'/><input type='time' id='time' />
+    <input type='text' id='title'/>
     <input type='submit' value='Start' />
   </form>
 </body>
