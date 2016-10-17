@@ -23,7 +23,6 @@
 	}
 
 	window.addEventListener("load",function(){
-
 		if (endTime > 0) {
 			document.body.classList.add("isTimer");
 			if (title != undefined && title != "") {
@@ -37,7 +36,7 @@
 			document.querySelector(".isForm form").addEventListener("submit",function(e){
 				e.preventDefault();
 				var ts = Math.floor(new Date(document.querySelector(".isForm input[type=date]").value+"T"+document.querySelector(".isForm input[type=time]").value).getTime()/1000);
-				var title = document.querySelector(".isForm #title").value;
+				var title = document.querySelector(".isForm #titleinput").value;
 				window.location.href+=("?"+ts+"/" + (title!=undefined?title:""));
 			},false);
 		}
