@@ -8,6 +8,7 @@
 		var now = moment();
 
 		var values = moment.preciseDiff(then,now,true);
+    values.weeks = now.diff(then,'week')+1;
 
 		document
 			.querySelectorAll(".isTimer ul li")
